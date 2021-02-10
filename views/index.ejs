@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html ng-app="NgApp" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>View Engine</title>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.8.2/angular.min.js"
+        integrity="sha512-7oYXeK0OxTFxndh0erL8FsjGvrl2VMDor6fVqzlLGfwOQQqTbYsGPv4ZZ15QHfSk80doyaM0ZJdvkyDcVO7KFA=="
+        crossorigin="anonymous">
+    </script>
+</head>
+<body ng-controller="NgController as vm">
+    <h1>Connected to Adam.Server1.0</h1>
+    <input type="text" ng-model="vm.message" />
+    <p>{{ vm.message }}</p>
+    <ul>
+        <li ng-repeat="person in vm.people">{{ person.name }}</li>
+    </ul>
+    <script>
+        var clientPeople = <%- JSON.stringify(people)%>;
+    </script>
+    <script src="/assets/js/app.js"></script>
+</body>
+</html>

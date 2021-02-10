@@ -1,0 +1,1 @@
+Short example of using view engine with Node.js and Angular
